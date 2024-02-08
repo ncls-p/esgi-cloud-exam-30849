@@ -1,7 +1,9 @@
 const { Sequelize } = require("sequelize");
+require("dotenv").config();
 
 // database
 const sequelize = new Sequelize({
+  database: process.env.DB_URL,
   dialectOptions: {
     ssl: {
       require: true,
