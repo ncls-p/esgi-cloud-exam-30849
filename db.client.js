@@ -1,17 +1,14 @@
 const { Sequelize } = require("sequelize");
 
 // database
-const sequelize = new Sequelize(
-  "postgres://postgree:MqvuiqJpDdeNLxFNAbpbZS60Ad5CIj7B@dpg-cn29mqf109ks7394hu4g-a/postgree_qlvd",
-  {
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
+const sequelize = new Sequelize({
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
     },
-  }
-);
+  },
+});
 
 // authentication and synchronization
 sequelize
